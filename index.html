@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>mary 개발 세션 로그 아카이브 · privateagent001</title>
+    <link rel="stylesheet" href="./assets/app.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-left">
+        <button id="mobile-menu-btn" class="icon-btn menu-btn" type="button" aria-label="목록 메뉴 열기">
+          <span aria-hidden="true">☰</span>
+        </button>
+        <a href="#overview" class="brand" id="brand-home-link">
+          <span class="brand-mark" aria-hidden="true">m</span>
+          <span class="brand-title">mary 세션 로그</span>
+        </a>
+        <span class="pill pill-accent" id="total-count-pill">아카이브</span>
+      </div>
+
+      <div class="topbar-search">
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="global-search-input"
+            class="search-input"
+            type="search"
+            placeholder="세션 로그 제목, PR, 키워드, 파일명 검색... (/)"
+            autocomplete="off"
+          />
+          <button id="search-clear-btn" class="search-clear hidden" type="button" aria-label="검색어 지우기">×</button>
+          <span class="search-kbd" aria-hidden="true">/</span>
+        </div>
+        <div id="global-search-dropdown" class="search-dropdown hidden" role="listbox"></div>
+      </div>
+
+      <div class="topbar-right">
+        <span id="build-time-pill" class="meta-pill">Zero-PII Verified</span>
+        <button id="theme-toggle-btn" class="btn btn-ghost" type="button">다크 모드</button>
+      </div>
+    </header>
+
+    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+    <div class="shell">
+      <aside id="sidebar" class="sidebar" aria-label="세션 로그 일자별 목차">
+        <div class="sidebar-top">
+          <a href="#overview" class="nav-home-btn" id="sidebar-home-btn">
+            <span>🏠</span>
+            <span>전체 타임라인 홈</span>
+          </a>
+        </div>
+        <nav id="sidebar-nav" class="sidebar-nav"></nav>
+        <div id="sidebar-footer" class="sidebar-footer"></div>
+      </aside>
+
+      <main class="main">
+        <div id="main-view" class="container">
+          <div class="loading-card">세션 로그 번들을 불러오는 중입니다...</div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./data/logs-bundle.js"></script>
+    <script src="./assets/app.js"></script>
+  </body>
+</html>
